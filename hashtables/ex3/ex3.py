@@ -2,9 +2,22 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    
+    result = [];
+    thingy = {};
 
-    return result
+    for a in arrays:
+        for i in a:
+            if i in thingy:
+                thingy[i] = thingy[i] + 1;
+            else:
+                thingy[i] = 1;
+    
+    for b in thingy:
+        if thingy[b] == len(arrays):
+            result.append(b);
+
+    return result;
 
 
 if __name__ == "__main__":

@@ -2,9 +2,13 @@ def has_negatives(a):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    result = [];
 
-    return result
+    for i in a:
+        if i > 0 and (i * -1) in a and i not in result:
+            result.append(i);
+
+    return result;
 
 
 if __name__ == "__main__":
